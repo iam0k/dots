@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+:root {
+
+    --primary-color: #e8a921;
+    --secondary-color: #f2dcae;
+    --text-color: #dadada;
+    --secondary-text-color:#b6b6b6;
+    --bg-color: #1a1a1a;
+    --bluecolor: #0078d7;
+
+    --grid-rows: 30;
+    --grid-cols: 50;
+    --grid-cell-size: 40px;
+}
+
+html {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.title {
+    padding-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-weight: lighter;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    color: var(--secondary-text-color);
+}
+
+p {
+    font-family: 'Consolas';
+    font-size: 12px;
+}
+
+.container {
+    margin-top: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+    margin-top: 20px;
+    grid-gap: 0px;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), minmax(var(--grid-cell-size), 1fr));
+}
+
+.grid-cell {
+    width: var(--grid-cell-size);
+    height: var(--grid-cell-size);
+    border: 1px solid rgb(77, 77, 77);
+    text-align: center;
+}
+
+.cross {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    border-radius: 50%;
+    border: whitesmoke 2px solid;
+    visibility: hidden;
+    opacity: 1;
+    transition: opacity .3s ease-out;
+}
+
+.point {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 1;
+    transition: opacity .3s ease-out;
+}
+
+.red {
+    background-color: red;
+    border: red 2px solid;
+}
+
+.blue {
+    background-color: var(--blue-color);
+    border: var(--blue-color) 2px solid;
+}
+
+.player {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.connector {
+    position: absolute;
+}
+
+.gameCanvas {
+    margin-top: 20px;
+}
+
+#gamescore {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#redscore {
+    color: #fb3e3e;
+}
+
+#bluescore {
+    color: #0078d7;
+}
+
+.footer {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+#octologo {
+    font-weight: bold;
+}
+
+.footer img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    padding-left: 4px;
+}

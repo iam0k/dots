@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dots</title>
+
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="i/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="i/favicon-16x16.png">
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="http://www.thebackend.ru/guess/i/favicon-32x32.ico"> -->
+</head>
+
+<body onload="start();">
+
+    <div class="title" id="gameTitle">
+        <h1>Dots</h1>
+        <h3>invade and win</h3>
+    </div>
+
+    <div id="container" class="container">
+        <div id="gamescore">
+            <span id="redscore">0</span> : <span id="bluescore">0</span>
+        </div>
+        <div id="player" class="player">
+            Next move: &#x1F7E5; Player
+        </div>
+        <canvas id="gameGrid" class="gameCanvas" width="1200px" height="644px" onclick="userClick(event);">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+    </div>
+
+    <div class="footer">
+        Made by <span id="octologo">0ctopus</span><img src="i/kraken.svg" alt="Octopus Logo" />
+    </div>
+
+    <script type="text/javascript" src="js/canvas.js"></script>
+    <script type="text/javascript" src="js/model.js"></script>
+    <script type="text/javascript" src="js/view.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+</body>
+
+</html>
