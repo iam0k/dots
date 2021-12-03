@@ -141,6 +141,11 @@ p {
     font-size: 12px;
 }
 
+.footer a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
 #octologo {
     font-weight: bold;
 }
@@ -149,5 +154,5 @@ p {
     width: 16px;
     height: 16px;
     vertical-align: middle;
-    padding-left: 4px;
+    padding: 4px;
 }
