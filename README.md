@@ -1,4 +1,4 @@
-# dots
+# Dots Game
 An abstract strategy board game for two players in which the aim is to surround more opponent points.
 
 A game starts with an empty board. The main object of the game is to capture your opponent's points by surrounding them.
