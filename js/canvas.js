@@ -3,15 +3,13 @@ class Painter {
     rows;
     cols;
     cellsize;
-    playerIndicator;
     pointRadius;
 
-    constructor(canvas, rows, cols, cellsize, playerIndicator) {
+    constructor(canvas, rows, cols, cellsize) {
         this.canvas = canvas;
         this.rows = rows;
         this.cols = cols;
         this.cellsize = cellsize;
-        this.playerIndicator = playerIndicator;
         this.pointRadius = 3;
     }
 
@@ -33,10 +31,6 @@ class Painter {
             ctx.lineTo(this.cellsize * this.cols, this.cellsize * j);
             ctx.stroke();
         }
-    }
-
-    drawNextPlayer(currentPlayer) {
-        this.playerIndicator.innerHTML = 'Next move: ' + this.getColorRectCode(currentPlayer) + ' Player';
     }
 
     drawPoint(x, y, color, id) {

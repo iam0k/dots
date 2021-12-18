@@ -1,5 +1,6 @@
 var canvas = document.getElementById('gameGrid');
-var player = document.getElementById('player');
+var playerblue = document.getElementById('playerblue');
+var playerred = document.getElementById('playerred');
 var scoreRedHTMLElement = document.getElementById('redscore');
 var scoreBlueHTMLElement = document.getElementById('bluescore');
 
@@ -11,7 +12,7 @@ const settingPlayerRedColor = '#fb3e3e';
 const settingPlayerBlueColor = '#0078d7';
 
 
-let view = new View(settingCols, settingRows, settingCellsize, canvas, player, settingPlayerRedColor, settingPlayerBlueColor, scoreRedHTMLElement, scoreBlueHTMLElement);
+let view = new View(settingCols, settingRows, settingCellsize, canvas, settingPlayerRedColor, settingPlayerBlueColor, scoreRedHTMLElement, scoreBlueHTMLElement, playerred, playerblue);
 
 function start() {
     view.painter.drawGrid();

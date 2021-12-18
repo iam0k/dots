@@ -8,7 +8,6 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/png" sizes="32x32" href="i/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="i/favicon-16x16.png">
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="http://www.thebackend.ru/guess/i/favicon-32x32.ico"> -->
 </head>
 
 <body onload="start();">
@@ -19,12 +18,21 @@
     </div>
 
     <div id="container" class="container">
-        <div id="gamescore">
-            <span id="redscore">0</span> : <span id="bluescore">0</span>
+        <div class="gamescore-container">
+            <div id="playerred" class="playercard playerred">
+                <div class="score">
+                    <span id="redscore">0</span>
+                </div>
+                <span>Roy Batty</span>
+            </div>
+            <div id="playerblue" class="playercard playerblue" style="opacity: .2;">
+                <span>Rick Deckard</span>
+                <div class="score">
+                    <span id="bluescore">0</span>
+                </div>
+            </div>
         </div>
-        <div id="player" class="player">
-            Next move: &#x1F7E5; Player
-        </div>
+
         <canvas id="gameGrid" class="gameCanvas" width="1200px" height="644px" onclick="userClick(event);">
             Your browser does not support the HTML5 canvas tag.
         </canvas>

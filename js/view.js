@@ -4,19 +4,23 @@ class View {
     painter;
     cellsize;
     currentPlayer = 'red';
+    playerRed;
+    playerBlue;
     playerRedColor;
     playerBlueColor;
     scoreRed;
     scoreBlue;
 
-    constructor(cols, rows, cellsize, canvas, playerIndicator, playerRedColor, playerBlueColor, scoreRedHTMLElement, scoreBlueHTMLElement) {
+    constructor(cols, rows, cellsize, canvas, playerRedColor, playerBlueColor, scoreRedHTMLElement, scoreBlueHTMLElement, playerRed, playerBlue) {
         this.grid = new Grid(cols, rows, cellsize);
-        this.painter = new Painter(canvas, rows, cols, cellsize, playerIndicator, playerRedColor, playerBlueColor);
+        this.painter = new Painter(canvas, rows, cols, cellsize, playerRedColor, playerBlueColor);
         this.cellsize = cellsize;
         this.playerRedColor = playerRedColor;
         this.playerBlueColor = playerBlueColor;
         this.scoreRed = scoreRedHTMLElement;
         this.scoreBlue = scoreBlueHTMLElement;
+        this.playerRed = playerRed;
+        this.playerBlue = playerBlue;
     }
 
     addPoint(mouseX, mouseY) {
@@ -39,9 +43,19 @@ class View {
             this.drawInactivePoints(this.grid.points.filter(point => (!point.active)));
 
             this.nextPlayer();
-            this.painter.drawNextPlayer(this.currentPlayer);
+            this.drawActivePlayer();
             this.scoreRed.innerHTML = this.getGameScore('red');
             this.scoreBlue.innerHTML = this.getGameScore('blue');
+        }
+    }
+
+    drawActivePlayer() {
+        if (this.currentPlayer === 'red') {
+            this.playerRed.style['opacity'] = 1;
+            this.playerBlue.style['opacity'] = .2;
+        } else {
+            this.playerRed.style['opacity'] = .2;
+            this.playerBlue.style['opacity'] = 1;
         }
     }
 

@@ -10,7 +10,7 @@
     --secondary-text-color:#b6b6b6;
     --bg-color: #1a1a1a;
     --bluecolor: #0078d7;
-
+    --redcolor: #fb3e3e;
     --grid-rows: 30;
     --grid-cols: 50;
     --grid-cell-size: 40px;
@@ -96,8 +96,8 @@ p {
 }
 
 .red {
-    background-color: red;
-    border: red 2px solid;
+    background-color: var(--redcolor);
+    border: var(--redcolor) 2px solid;
 }
 
 .blue {
@@ -121,18 +121,53 @@ p {
     margin-top: 20px;
 }
 
-#gamescore {
-    text-align: center;
-    font-size: 30px;
+.gamescore-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.playercard {
+    width: 300px;
+    padding: 16px;
+    font-size: 18px;
     font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--text-color);
 }
 
-#redscore {
-    color: #fb3e3e;
+.playerblue {
+    margin-left: auto;
+    text-align: right;
+    justify-content: right;
+    background-color: var(--bluecolor);
 }
 
-#bluescore {
-    color: #0078d7;
+.playerred {
+    background-color: var(--redcolor);
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    min-height: 42px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid var(--text-color);
+}
+
+.playerred .score {
+    margin-right: 12px;
+}
+
+ .playerblue .score {
+    margin-left: 12px;
 }
 
 .footer {
