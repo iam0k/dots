@@ -52,9 +52,9 @@ class View {
     drawActivePlayer() {
         if (this.currentPlayer === 'red') {
             this.playerRed.style['opacity'] = 1;
-            this.playerBlue.style['opacity'] = .2;
+            this.playerBlue.style['opacity'] = .6;
         } else {
-            this.playerRed.style['opacity'] = .2;
+            this.playerRed.style['opacity'] = .6;
             this.playerBlue.style['opacity'] = 1;
         }
     }

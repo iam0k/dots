@@ -138,6 +138,7 @@ p {
     flex-direction: row;
     align-items: center;
     color: var(--text-color);
+    box-sizing: border-box;
 }
 
 .playerblue {
